@@ -1,0 +1,1022 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* Reset e configurações base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    /* Define 1rem = 10px para facilitar cálculos */
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--Preto-Charcoal-700, #0E161D);
+    overflow-x: hidden;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 132.2rem;
+    /* 1322px */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+:root {
+    --White: #FFF;
+    --black-25: #F7F7F8;
+    --black-50: #E7E8E9;
+    --black-100: #B7BABC;
+    --black-200: #878B8F;
+    --black-300: #707479;
+    --black-400: #40464D;
+    --black-500: #101820;
+    --black-600: #101820;
+    --black-700: #0E161D;
+    --black-800: #0D131A;
+    --black-900: #070B0E;
+    --gray-25: #FCFCFC;
+    --gray-50: #FBFBFB;
+    --gray-100: #F7F7F7;
+    --gray-200: #F0F0EF;
+    --gray-300: #E8E8E6;
+    --gray-400: #E1E1DE;
+    --gray-500: #D9D9D6;
+    --gray-600: #AEAEAB;
+    --gray-700: #828280;
+    --gray-800: #575756;
+    --gray-900: #2B2B2B;
+    --font-size-14p: 14px;
+    --font-size-16p: 16px;
+    --font-size-18p: 18px;
+    --font-size-20p: 20px;
+    --font-size-28p: 28px;
+    --font-size-32p: 32px;
+    --font-size-40p: 40px;
+    --font-size-48p: 48px;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --line-height-110: 110%;
+    --line-height-120: 120%;
+    --line-height-130: 130%;
+    --line-height-140: 140%;
+    --line-height-150: 150%;
+
+    --font-style-normal: normal;
+    --font-open-sans: 'Open Sans', sans-serif;
+
+    --white: #FFF;
+    --black-900: #070B0E;
+
+    /* Tamanhos */
+    --header-height: 8rem;
+    --container-padding: 1.5rem;
+
+    /* Breakpoints */
+    --mobile: 480px;
+    --tablet: 768px;
+    --laptop: 1024px;
+    --desktop: 1200px;
+}
+
+/* components/header.css */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: transparent;
+    z-index: 1000;
+
+    /* inspeção */
+    background-color: var(--black-900);
+    /* inspeção */
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.div-img-logo {
+    border-radius: 10%;
+    height: 5.4rem;
+}
+
+.div-img-logo img {
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(120%);
+}
+
+.div-content-text-header {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem;
+}
+
+.div-content-text-header a {
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 150%;
+    transition: opacity 0.3s ease;
+}
+
+.div-content-text-header a:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.ButtonMain-header {
+    display: flex;
+    height: 4rem;
+    padding: 0.8rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.ButtonMain-header:hover {
+    transform: translateY(-2px);
+}
+
+.ButtonMain-header a {
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    color: var(--black-900);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+/* layouts/banner1.css */
+.section-banner1 {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.section-banner1 .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-banner1 .container {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4.8rem;
+    margin-top: 57.4rem;
+}
+
+/* Content Area */
+.h1-content-banner {
+    width: 100%;
+    max-width: 78.4rem;
+    margin: 0;
+    /* Remove o margin: 0 auto do reset global */
+}
+
+.h1-titulo {
+    margin-bottom: 0.5rem;
+}
+
+.h1-titulo h1 {
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 700;
+    line-height: 110%;
+}
+
+/* Buttons Area */
+.div-content-contact {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.button-banner a {
+    display: inline-flex;
+    height: 4.8rem;
+    padding: 0.8rem 2rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+    transition: transform 0.3s ease;
+}
+
+.button-banner a:hover {
+    transform: translateY(-2px);
+}
+
+.button-saibMais {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.button-saibMais a {
+    text-decoration: none;
+    color: var(--gray-25);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.button-saibMais img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.button-saibMais:hover img {
+    transform: translateX(5px);
+}
+
+/*-----scroller-----*/
+
+.section-scroller {
+    height: 90px;
+    display: flex;
+    padding: 32px 0px;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: stretch;
+    background: var(--Preto-Charcoal-700, #0E161D);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-bottom: 1px solid var(--black-900);
+}
+
+#section-scroller2 {
+    border-bottom: none;
+    border-top: 1px solid var(--black-900);
+}
+
+.scroller-content {
+    width: 100%;
+    height: 85%;
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateX(100%);
+
+    gap: 20px;
+    opacity: 10%;
+}
+
+.scroller-content img {
+    height: 30px;
+    margin-right: 3%;
+}
+
+
+/*-----section scroller-----*/
+
+/* layouts/banner2.css */
+.section-banner2 {
+    position: relative;
+    width: 100%;
+    min-height: 81.2rem;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* Background Container */
+.banner2-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 98%;
+}
+
+.img1-banner2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Container Principal */
+.section-banner2 .container {
+    position: relative;
+    height: 100%;
+    min-height: 81.2rem;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Área de Conteúdo */
+.banner2-content {
+    width: 100%;
+    max-width: 59.9rem;
+    margin: 0;
+    padding: 8rem 0;
+}
+
+.text-content-banner2-h3 {
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    color: var(--black-200);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 2rem;
+}
+
+.text-content-banner2-h2 {
+    color: var(--black-900);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 2rem);
+    color: var(--black-100);
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+    margin-bottom: 1.6rem;
+}
+
+.text-content-banner2-h3-2 {
+    color: var(--black-400);
+    font-family: var(--font-open-sans);
+    color: var(--gray-600);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 4rem;
+}
+
+.text-content-banner2-h3-2 span {
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.content-text2h32-1,
+.content-text2h32-2,
+.content-text2h32-3,
+.content-text2h32-4,
+.content-text2h32-5,
+.content-text2h32-6,
+.content-text2h32-7,
+.content-text2h32-8 {
+    margin-bottom: 1%;
+}
+
+/* Botão */
+.button-main-banner2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.button-main-banner2:hover {
+    opacity: 0.8;
+}
+
+.button-main-banner2 a {
+    text-decoration: none;
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.button-main-banner2 img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.button-main-banner2:hover img {
+    transform: translateX(5px);
+}
+
+.text-content-banner2-h3-3 {
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 150%;
+    max-width: 39.3rem;
+}
+
+/*-----section banner 2-----*/
+/*-----section banner 3-----*/
+
+.section-banner3 {
+    position: relative;
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--black-700, #0E161D);
+    overflow: hidden;
+}
+
+/* Header Content */
+.banner3-header {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.text-content-banner3h31 {
+    color: var(--gray-25);
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 2%;
+}
+
+.text-content-banner3h21 {
+    max-width: 72.5rem;
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(1.8rem, 3vw, 1.2rem);
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+}
+
+/* Cards Grid */
+.div-content-banner3-wrapper-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    width: 100%;
+}
+
+.service-card {
+    position: relative;
+    aspect-ratio: 432/503;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3.2rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.service-card-content {
+    position: relative;
+    color: var(--white);
+}
+
+.service-card h4 {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.tag-soon {
+    display: inline-flex;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.80);
+    background: rgba(255, 255, 255, 0.10);
+    margin-bottom: 1rem;
+}
+
+.tag-soon p {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cursor-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .cursor-icon {
+    transform: translate(5px, -5px);
+}
+
+/*----SECTION BANNER 4----*/
+
+.section-banner4 {
+    position: relative;
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--white);
+}
+
+/* Header da seção */
+.banner4-header {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.banner4-header-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.banner4-header-icon img {
+    width: 3.2rem;
+    height: auto;
+}
+
+.banner4-header h3 {
+    color: var(--black-900);
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.banner4-header p {
+    max-width: 62.9rem;
+    color: var(--black-900);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.8rem, 3vw, 3.2rem);
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+}
+
+/* Grid de benefícios */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.benefit-icon {
+    width: 5.2rem;
+    height: 5.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.benefit-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.benefit-card h5 {
+    color: var(--black-900);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.benefit-card p {
+    color: var(--black-400);
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/* Hover effects */
+.benefit-card {
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+
+/* components/footer.css */
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 8rem 0;
+    background-color: var(--black-700, #0E161D);
+    color: var(--white);
+}
+
+/* Logo */
+.footer-logo {
+    margin-bottom: 5.4rem;
+}
+
+.footer-logo img {
+    height: 20%;
+    width: auto;
+}
+
+/* Grid Layout */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+/* CTA Section */
+.footer-cta {
+    max-width: 52.1rem;
+}
+
+.footer-cta h2 {
+    color: var(--gray-25);
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+    margin-bottom: 3.2rem;
+}
+
+.footer-cta-button {
+    display: inline-flex;
+    height: 4.8rem;
+    padding: 0.8rem 2rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.footer-cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.footer-cta-button a {
+    color: var(--black-900);
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+/* Contact Info */
+.footer-contact {
+    max-width: 35.8rem;
+}
+
+.footer-contact p {
+    font-family: var(--font-open-sans);
+    line-height: 150%;
+    margin-bottom: 1.4rem;
+}
+
+.footer-description {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+}
+
+.contact-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--gray-25);
+}
+
+.contact-value {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--gray-25);
+    margin-bottom: 1.4rem;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3.2rem;
+}
+
+/* Social Media */
+.footer-social {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.footer-social a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.8;
+}
+
+/* Copyright and Credits */
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.copyright, .credits {
+    color: var(--gray-25);
+    font-family: var(--font-open-sans);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.credits {
+    opacity: 0.8;
+}
+
+.footer-info span,
+.contact-value {
+    color: var(--gray-700);
+}
+
+/*-----section banner 3-----*/
+
+/*----- mobile
+
+    --mobile: 480px;
+    --tablet: 768px;
+    --laptop: 1024px;
+    --desktop: 1200px;
+
+        Breakpoints----- 
+
+    */
+
+@media screen and (min-width:1025px) {
+    .menu-square {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .div-content-text-header,
+    .ButtonMain-header {
+        display: none;
+    }
+
+    .menu-square {
+        cursor: pointer;
+    }
+
+    header {
+        background: var(--black-800);
+        opacity: 99%;
+        border-bottom: 1px solid var(--gray-100);
+    }
+
+    header .container {
+        display: flex;
+        width: 375px;
+        padding: 20px 48px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .section-banner1 .bg-image {
+        text-align: center;
+    }
+
+    .h1-content-banner {
+        display: block;
+    }
+
+    .h1-titulo h1 {
+        font-size: 2.1rem;
+        text-align: center;
+    }
+
+    .div-content-contact {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .button-banner,
+    .footer-cta-button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .button-banner a {
+        padding: 8px 20px;
+        width: 100%;
+    }
+
+    .section-banner2 {
+        display: block;
+        height: 936px;
+    }
+
+    .banner2-content {
+        margin: 0 auto;
+        text-align: center;
+        width: 95%;
+    }
+
+    .text-content-banner2-h3-2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .text-content-banner2-h3-3 {
+        max-width: 28rem;
+    }
+
+    .text-content-banner2-h2 {
+        max-width: 45rem;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    /* Container Principal */
+    .section-banner2 .container,
+    .section-banner3 {
+        flex-wrap: wrap;
+        align-content: start;
+    }
+
+    .text-content-banner2-h2 span {
+        display: none;
+    }
+
+    .text-content-banner3h21 {
+        width: 90%;
+    }
+
+    .service-card-image {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        border-radius: 5%;
+    }
+
+    .service-card,
+    .service-card-image img,
+    .service-card-overlay {
+        border-radius: 2%;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+
+    .benefit-card {
+        text-align: left;
+    }
+
+    .b3-content,
+    .text-content-banner3h21 {
+        margin: 0 auto;
+    }
+
+    .banner3-header {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .div-content-banner3-wrapper-img {
+        display: block;
+    }
+
+    .benefits-grid,
+    .footer-content,
+    .footer-info {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-content: start;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .footer-social {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .copyright {
+        width: 100%;
+    }
+
+    .credits {
+        width: 100%;
+        align-content: start;
+    }
+
+    footer .container {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .footer-cta,
+    .footer-contact {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
