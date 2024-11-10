@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { tag: 'img', src: 'assets/img/log-node-js.png', alt: 'logo-node-js' },
         { tag: 'img', src: 'assets/img/log-python.png', alt: 'logo-python' },
         { tag: 'img', src: 'assets/img/log-react.png', alt: 'logo-react' },
-        { tag: 'img', src: 'assets/img/log-typescript.png', alt: 'logo-typescript' }
+        { tag: 'img', src: 'assets/img/log-typescript.png', alt: 'logo-typescript' },
+
     ];
 
     function insertContent(scrollerContent) {
@@ -75,5 +76,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         scrollContinuously();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Esconde o cursor padrão 
+    document.body.style.cursor = 'none';
+    // Cria o elemento do cursor personalizado 
+    const customCursor = document.createElement('div');
+    customCursor.style.position = 'absolute';
+    customCursor.style.width = '20px';
+    customCursor.style.height = '20px';
+    customCursor.style.border = '1px solid red';
+    customCursor.style.borderRadius = '50%';
+    customCursor.style.pointerEvents = 'none';
+    customCursor.style.zIndex = '1000';
+    // Adiciona o cursor personalizado ao corpo do documento 
+    document.body.appendChild(customCursor);
+    // Move o cursor personalizado com o movimento do mouse 
+    document.addEventListener('mousemove', function (e) {
+        customCursor.style.left = e.pageX + 'px';
+        customCursor.style.top = e.pageY + 'px';
     });
 });

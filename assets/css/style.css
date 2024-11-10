@@ -17,6 +17,7 @@ html {
 body {
     background: var(--Preto-Charcoal-700, #0E161D);
     overflow-x: hidden;
+    /* Esconde o cursor padrão */
 }
 
 /* Container principal */
