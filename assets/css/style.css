@@ -449,15 +449,16 @@ header .container {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 150%;
-    margin-bottom: 2%;
+    margin-top: .5rem;
+    margin-bottom: .8rem;
 }
 
 .text-content-banner3h21 {
     max-width: 72.5rem;
-    color: var(--gray-25);
+    color: var(--black-200);
     font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(1.8rem, 3vw, 1.2rem);
-    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 1.2rem);
+    font-weight: 400;
     line-height: 120%;
     letter-spacing: 0.4px;
 }
@@ -465,9 +466,9 @@ header .container {
 /* Cards Grid */
 .div-content-banner3-wrapper-img {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.4rem;
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
+    margin: 0 auto;
 }
 
 .service-card {
@@ -477,6 +478,9 @@ header .container {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-card:hover {
@@ -485,8 +489,14 @@ header .container {
 
 .service-card-image {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
+    padding: 0.4%;
+}
+
+.service-card-image:hover {
+    border-top: 1px solid var(--blue--);
+    border-left: 1px solid var(--blue--);
 }
 
 .service-card-image img {
@@ -558,14 +568,14 @@ header .container {
 .section-banner4 {
     position: relative;
     width: 100%;
-    padding: 8rem 0;
+    padding: 5.2rem 0;
     background-color: var(--white);
 }
 
 /* Header da seção */
 .banner4-header {
     position: relative;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 }
 
 .banner4-header-icon {
@@ -592,8 +602,8 @@ header .container {
     max-width: 62.9rem;
     color: var(--black-900);
     font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(2.8rem, 3vw, 3.2rem);
-    font-weight: 600;
+    font-size: clamp(1.8rem, 3vw, 1.2rem);
+    font-weight: 400;
     line-height: 120%;
     letter-spacing: 0.4px;
 }
@@ -655,7 +665,7 @@ header .container {
 .footer {
     position: relative;
     width: 100%;
-    padding: 8rem 0;
+    padding: 4rem 0;
     background-color: var(--black-700, #0E161D);
     color: var(--white);
 }
