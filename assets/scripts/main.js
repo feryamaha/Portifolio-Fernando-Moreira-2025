@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { tag: 'img', src: 'assets/img/log-python.png', alt: 'logo-python' },
         { tag: 'img', src: 'assets/img/log-react.png', alt: 'logo-react' },
         { tag: 'img', src: 'assets/img/log-typescript.png', alt: 'logo-typescript' },
-
     ];
 
     function insertContent(scrollerContent) {
@@ -107,3 +106,10 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.target.elements.message.value = '';
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const header = document.querySelector('header');
+    menuIcon.addEventListener('click', function () {
+        header.classList.toggle('show-menu');
+    });
+});
