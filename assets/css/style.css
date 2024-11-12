@@ -745,47 +745,6 @@ header .container {
 
 /* ... outras regras CSS ... */
 
-@media screen and (max-width: 1024px) {
-
-    .div-content-text-header a {
-
-        font-size: 1rem;
-        font-weight: 400;
-    }
-}
-    /*.div-content-text-header,
-    .ButtonMain-header {
-        display: none;
-    }
-
-    .menu-square {
-        cursor: pointer;
-    }
-
-    header {
-        background: var(--black-800);
-        opacity: 99%;
-        border-bottom: 1px solid var(--gray-100);
-    }
-
-    header .container {
-        display: flex;
-        width: 375px;
-        padding: 20px 48px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .show-menu .div-content-text-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}*/
-
-/* ... outras regras CSS ... */
-
-
 @media screen and (max-width: 768px) {
 
     .section-banner1 .bg-image {
@@ -858,6 +817,8 @@ header .container {
     .text-content-banner2-h2 span {
         display: none;
     }
+
+ 
 
     .text-content-banner3h21 {
         width: 90%;
@@ -940,4 +901,44 @@ header .container {
         margin: 0 auto;
         text-align: center;
     }
+}
+
+@media screen and (max-width: 630px) {
+
+    header .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .div-img-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .div-img-logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .div-content-text-header {
+        gap: .8rem;
+    }
+
+    .div-content-text-header a {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    .content-text2h32-1,
+    .content-text2h32-2,
+    .content-text2h32-3,
+    .content-text2h32-4,
+    .content-text2h32-5,
+    .content-text2h32-6,
+    .content-text2h32-7,
+    .content-text2h32-8 {
+        margin-bottom: 1%;
+        font-size: 1.3rem;
+    }
+
 }
