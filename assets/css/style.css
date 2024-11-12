@@ -42,6 +42,7 @@ body {
     --black-700: #0E161D;
     --black-800: #0D131A;
     --black-900: #070B0E;
+    --blue--: #4444bd;
     --gray-25: #FCFCFC;
     --gray-50: #FBFBFB;
     --gray-100: #F7F7F7;
@@ -143,31 +144,8 @@ header .container {
 
 .div-content-text-header a:hover {
     opacity: 0.8;
+    color: var(--blue--);
     border-bottom: 1px solid var(--gray-800);
-}
-
-.ButtonMain-header {
-    display: flex;
-    height: 4rem;
-    padding: 0.8rem 2rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2px;
-    background: var(--white);
-    transition: transform 0.3s ease;
-}
-
-.ButtonMain-header:hover {
-    transform: translateY(-2px);
-}
-
-.ButtonMain-header a {
-    text-decoration: none;
-    font-family: var(--font-open-sans);
-    color: var(--black-900);
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 140%;
 }
 
 /* layouts/banner1.css */
@@ -371,7 +349,7 @@ header .container {
 .text-content-banner2-h2 {
     color: var(--black-900);
     font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(2.2rem, 4vw, 2rem);
+    font-size: clamp(2.1rem, 4vw, 2rem);
     color: var(--black-100);
     font-weight: 600;
     line-height: 120%;
@@ -403,6 +381,7 @@ header .container {
 .content-text2h32-7,
 .content-text2h32-8 {
     margin-bottom: 1%;
+    font-size: 1.5rem;
 }
 
 /* Botão */
@@ -681,106 +660,20 @@ header .container {
     color: var(--white);
 }
 
-/* Logo */
-.footer-logo {
-    margin-bottom: 5.4rem;
-}
-
-.footer-logo img {
-    height: 20%;
-    width: auto;
-}
-
-/* Grid Layout */
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 8rem;
-}
-
-/* CTA Section */
-.footer-cta {
-    max-width: 52.1rem;
-}
-
-.footer-cta h2 {
-    color: var(--gray-25);
-    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-    font-size: clamp(2.4rem, 3vw, 3.2rem);
-    font-weight: 600;
-    line-height: 120%;
-    letter-spacing: 0.4px;
-    margin-bottom: 3.2rem;
-}
-
-.footer-cta-button {
-    display: inline-flex;
-    height: 4.8rem;
-    padding: 0.8rem 2rem;
-    align-items: center;
-    justify-content: center;
-    background: var(--white);
-    border-radius: 2px;
-    transition: transform 0.3s ease;
-}
-
-.footer-cta-button:hover {
-    transform: translateY(-2px);
-}
-
-.footer-cta-button a {
-    color: var(--black-900);
-    text-decoration: none;
-    font-family: var(--font-open-sans);
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 140%;
-}
-
-/* Contact Info */
-.footer-contact {
-    max-width: 35.8rem;
-}
-
-.footer-contact p {
-    font-family: var(--font-open-sans);
-    line-height: 150%;
-    margin-bottom: 1.4rem;
-}
-
-.footer-description {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 2.4rem;
-}
-
-.contact-label {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--gray-25);
-}
-
-.contact-value {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--gray-25);
-    margin-bottom: 1.4rem;
-}
-
 /* Bottom Bar */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 3.2rem;
+    padding-top: 1.2rem;
 }
 
 /* Social Media */
 .footer-social {
     display: flex;
     gap: 3.2rem;
+
 }
 
 .footer-social a {
@@ -819,6 +712,7 @@ header .container {
 .contact-value {
     color: var(--gray-700);
 }
+
 
 /*-----section banner 3-----*/
 
