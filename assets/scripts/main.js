@@ -113,3 +113,37 @@ document.addEventListener('DOMContentLoaded', function () {
         header.classList.toggle('show-menu');
     });
 });
+
+// Iniciar o serviço EmailJS
+(function () {
+    emailjs.init("11XOyKGWS6VjFjAUuMSJr"); // Substitua "YOUR_USER_ID" pelo seu user ID do EmailJS
+})();
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const serviceID = 'service_vewhszb'; // Substitua "YOUR_SERVICE_ID" pelo seu service ID do EmailJS
+        const templateID = 'template_b74f1vs'; // Substitua "YOUR_TEMPLATE_ID" pelo seu template ID do EmailJS
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(function () {
+                console.log('SUCCESS!');
+                document.getElementById('contact-form').reset();
+                displayMessage('Mensagem enviada com sucesso!', 'success');
+            }, function (error) {
+                console.log('FAILED...', error);
+                displayMessage('Ocorreu um erro ao enviar sua mensagem. Tente novamente.', 'error');
+            });
+    });
+
+    function displayMessage(message, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}`;
+        messageDiv.textContent = message;
+        document.body.appendChild(messageDiv);
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000); // Mensagem desaparece após 5 segundos
+    }
+});

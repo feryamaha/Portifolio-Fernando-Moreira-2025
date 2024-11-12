@@ -120,7 +120,7 @@ header .container {
     margin: 0 auto;
     padding: 40px 0;
     color: var(--gray-600);
-    font-size: var(--font-size-48p);
+    font-size: var(--font-size-40p);
     font-weight: 900;
     font-family: var(--font-open-sans);
     letter-spacing: 6px;
@@ -135,7 +135,6 @@ header .container {
     padding: 10px;
     position: relative;
     width: 90%;
-    background-color: green;
 }
 
 /* Left contact form */
@@ -143,12 +142,10 @@ header .container {
     width: 60%;
     font-weight: 400;
     padding: 1%;
-    background-color: blueviolet;
 }
 
 .form-group {
     width: 100%;
-    background: blueviolet;
 }
 
 .input-field, textarea {
@@ -166,7 +163,7 @@ header .container {
 }
 
 .send-button:hover {
-    background-color: green;
+    background-color: #008000;
     color: var(--gray-100);
     font-weight: 500;
     cursor: pointer;
@@ -193,19 +190,14 @@ header .container {
 /* Location, Phone, Email Section */
 .contact-details-list {
     list-style-type: none;
-    /*margin-left: -30px;
-    padding-right: 20px;*/
-}
-
-.form-group {
-    background-color: #249ee4;
+    margin-left: -30px;
+    padding-right: 20px;
 }
 
 .contact-item {
     width: 100;
     line-height: 4;
     color: #aaa;
-    background-color: blue;
 }
 
 #item-location:hover {
@@ -224,7 +216,7 @@ header .container {
 }
 
 .contact-text {
-    font: 300 18px 'Lato', sans-serif;
+    font: 200 12px 'Lato', sans-serif;
     letter-spacing: 1.9px;
     color: #bbb;
 }
@@ -334,6 +326,30 @@ hr {
     border-color: rgba(255, 255, 255, .6);
 }
 
+.message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    z-index: 10000;
+    opacity: 0.9;
+}
+
+.message.success {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.message.error {
+    background-color: #f44336;
+    color: #fff;
+}
+
+
 /* Begin Media Queries */
 @media screen and (max-width: 850px) {
     .contact-container {
@@ -403,12 +419,5 @@ hr {
 @media screen and (max-width: 410px) {
     .send-button {
         width: 99%;
-    }
-
-
-    #item-email,
-    #item-WhatsApp,
-    #item-location {
-        display: none;
     }
 }
